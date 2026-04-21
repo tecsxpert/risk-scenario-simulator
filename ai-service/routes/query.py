@@ -12,15 +12,19 @@ def query():
     
     question = request.json.get("question")
 
-    # Step 1: Retrieve context
+    # 🟢 Step 1: Get context
     results = query_docs(question)
-    context = results["documents"][0]
+    context = results.get("documents", [[]])[0]
 
-    # Step 2: Better structured prompt
+    # 🟢 Step 2: Prompt (Day 6 tuned)
     prompt = f"""
-    You are an expert risk analysis AI.
+    You are a professional Risk Analysis AI.
 
-    Use ONLY the context below to answer.
+    STRICT RULES:
+    - Use ONLY given context
+    - Do NOT hallucinate
+    - Answer clearly in 2-3 lines
+    - Be precise and professional
 
     Context:
     {context}
@@ -28,19 +32,32 @@ def query():
     Question:
     {question}
 
-    Give output in JSON:
+    Return ONLY valid JSON:
     {{
-        "answer": "...",
-        "risk_type": "...",
-        "confidence": 0-1
+      "answer": "...",
+      "risk_type": "Financial | Operational | Security | Technical",
+      "confidence": number (0-1)
     }}
     """
 
-    # Step 3: Generate answer
+    # 🟢 Step 3: Call AI
     response = client.generate(prompt)
+
+    # 🟢 Step 4: Fallback
+    if not response:
+        response = {
+            "answer": "Unable to process",
+            "risk_type": "Unknown",
+            "confidence": 0.5
+        }
+
+    # 🟢 Step 5: Handle string/dict safely
+    if isinstance(response, str):
+        response = response.strip()
 
     end_time = time.time()
 
+    # 🟢 Step 6: Return final output
     return jsonify({
         "result": response,
         "meta": {
