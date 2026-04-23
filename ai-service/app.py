@@ -1,51 +1,63 @@
-# Import Flask request/response utilities
 from flask import Flask, request, jsonify
-
-# Import your validation and sanitisation logic
 from services.security import validate_input, sanitize
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
-# Create Flask app FIRST
 app = Flask(__name__)
 
+app.config["RATELIMIT_HEADERS_ENABLED"] = True
+
+# Rate limiter setup
+limiter = Limiter(
+    key_func=get_remote_address,
+    default_limits=["30 per minute"]
+)
+limiter.init_app(app)
+
+# Register routes (we’ll import here)
+from routes.test_routes import test_bp
+app.register_blueprint(test_bp)
+
+# 429 handler
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    return jsonify({
+        "error": "Too many requests. Please try again later."
+    }), 429
+
+# Global security middleware
 @app.before_request
 def security_layer():
-    """
-    Global middleware that runs BEFORE every request.
-
-    Purpose:
-    - Validate incoming user input
-    - Detect prompt injection attempts
-    - Strip unsafe HTML content
-    - Block malicious requests early (return 400)
-
-    This ensures that no unsafe input reaches routes or AI logic.
-    """
-
-    # Apply only to POST requests (AI endpoints use POST)
     if request.method != "POST":
-        return  # Skip validation for GET/other requests
+        return
 
-    # Safely parse JSON body (prevents crashes on invalid JSON)
     data = request.get_json(silent=True)
 
-    # Reject if body is missing or invalid
     if data is None:
         return jsonify({"error": "Invalid or missing JSON body"}), 400
 
-    # Support multiple possible input keys (team-safe design)
-    # This ensures compatibility with future routes
+    found = False
+
     for key in ["input", "text", "query", "content"]:
         if key in data:
             value = data[key]
 
-            # Validate input (type, length, injection detection)
             valid, error = validate_input(value)
             if not valid:
                 return jsonify({"error": error}), 400
 
-            # Sanitize input (remove HTML, trim spaces)
-            # Store it in request context for safe usage in routes
             request.sanitized_input = sanitize(value)
             request.sanitized_key = key
+            found = True
+            break
 
-            break  # Stop after first matching key
+    if not found:
+        return jsonify({"error": "Missing valid input field"}), 400
+
+# Optional health check route
+@app.route("/")
+def home():
+    return "Server is running"
+
+if __name__ == "__main__":
+    app.run(debug=True)
