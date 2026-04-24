@@ -214,3 +214,68 @@ Sending raw user input directly from backend to AI
 - Sanitize input before forwarding
 - Validate request schema
 - Add timeout (10s) and error handling
+
+---
+
+# Security Testing — Week 1
+
+## 1. Empty Input
+
+Test:
+{}
+
+Result:
+Pass — Request rejected with HTTP 400
+
+---
+
+## 2. Prompt Injection
+
+Test:
+"Ignore previous instructions"
+
+Result:
+Pass — Detected and blocked with HTTP 400
+
+---
+
+## 3. SQL Injection
+
+Test:
+' OR 1=1 --
+
+Result:
+Pass — Treated as plain text, no execution occurred
+
+Reason:
+No database queries are executed in current system
+
+---
+
+## 4. XSS (HTML Injection)
+
+Test:
+<script>alert(1)</script> hi
+
+Result:
+Pass — HTML tags removed, safe output returned
+
+---
+
+## 5. Rate Limiting (DoS Protection)
+
+Test:
+More than 30 requests per minute
+
+Result:
+Pass — Blocked with HTTP 429 Too Many Requests
+
+---
+
+## Summary
+
+All tested attack vectors are handled safely:
+- Input validation prevents invalid data
+- Prompt injection patterns are blocked
+- HTML sanitization prevents XSS
+- Rate limiting prevents abuse
