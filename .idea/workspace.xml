@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8cddfa-7bd7-4dfd-bbec-cc2b32a28941" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ai-service/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ai-service/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shiva-java-dev2&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -54,6 +54,8 @@
       <workItem from="1777479527073" duration="871000" />
       <workItem from="1777480415992" duration="2586000" />
       <workItem from="1777483029409" duration="1615000" />
+      <workItem from="1777486863701" duration="705000" />
+      <workItem from="1777487596367" duration="727000" />
     </task>
     <servers />
   </component>
