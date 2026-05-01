@@ -191,3 +191,156 @@
 2026-04-29 17:26:23,846 - INFO - Received question: cyber attack risk
 2026-04-29 17:26:23,846 - INFO - Cache hit
 2026-04-29 17:26:23,846 - INFO - 127.0.0.1 - - [29/Apr/2026 17:26:23] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:35:11,284 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.25.67.100:5000
+2026-04-30 13:35:11,353 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 13:36:32,598 - INFO - Received question: cyber attack risk
+2026-04-30 13:36:32,645 - ERROR - Error: '\n  "answer"'
+2026-04-30 13:36:32,647 - INFO - 127.0.0.1 - - [30/Apr/2026 13:36:32] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2026-04-30 13:38:26,388 - INFO - Received question: cyber attack risk
+2026-04-30 13:38:26,389 - ERROR - Error: '\n  "answer"'
+2026-04-30 13:38:26,389 - INFO - 127.0.0.1 - - [30/Apr/2026 13:38:26] "[35m[1mPOST /query HTTP/1.1[0m" 500 -
+2026-04-30 13:43:34,005 - INFO - Received question: cyber attack risk
+2026-04-30 13:43:34,037 - INFO - Calling AI model
+2026-04-30 13:43:38,003 - INFO - Response generated successfully
+2026-04-30 13:43:38,004 - INFO - 127.0.0.1 - - [30/Apr/2026 13:43:38] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:47:12,963 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.25.67.100:5000
+2026-04-30 13:47:12,963 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 13:47:21,287 - INFO - Received question: cyber attack risk
+2026-04-30 13:47:21,288 - INFO - Calling AI model
+2026-04-30 13:47:23,899 - INFO - Response generated successfully
+2026-04-30 13:47:23,900 - INFO - 127.0.0.1 - - [30/Apr/2026 13:47:23] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:47:28,128 - INFO - Received question: cyber attack risk
+2026-04-30 13:47:28,128 - INFO - Cache hit
+2026-04-30 13:47:28,129 - INFO - 127.0.0.1 - - [30/Apr/2026 13:47:28] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:47:37,164 - INFO - Received question: cyber attack risk
+2026-04-30 13:47:37,165 - INFO - Cache hit
+2026-04-30 13:47:37,165 - INFO - 127.0.0.1 - - [30/Apr/2026 13:47:37] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:48:01,895 - INFO - Received question: cyber attack risk
+2026-04-30 13:48:01,896 - INFO - Cache hit
+2026-04-30 13:48:01,896 - INFO - 127.0.0.1 - - [30/Apr/2026 13:48:01] "POST /query HTTP/1.1" 200 -
+2026-04-30 13:48:04,296 - INFO - Received question: cyber attack risk
+2026-04-30 13:48:04,296 - INFO - Cache hit
+2026-04-30 13:48:04,296 - INFO - 127.0.0.1 - - [30/Apr/2026 13:48:04] "POST /query HTTP/1.1" 200 -
+2026-04-30 20:49:40,293 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-30 20:49:40,313 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 20:49:40,393 - INFO -  * Restarting with stat
+2026-04-30 20:49:42,240 - WARNING -  * Debugger is active!
+2026-04-30 20:49:42,335 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 20:50:02,704 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\app.py', reloading
+2026-04-30 20:50:03,037 - INFO -  * Restarting with stat
+2026-04-30 20:50:05,241 - WARNING -  * Debugger is active!
+2026-04-30 20:50:05,245 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 20:50:10,865 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-04-30 20:50:10,865 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 20:50:10,869 - INFO -  * Restarting with stat
+2026-04-30 20:50:12,153 - WARNING -  * Debugger is active!
+2026-04-30 20:50:12,158 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:02:08,154 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\redis_client.py', reloading
+2026-04-30 21:02:08,694 - INFO -  * Restarting with stat
+2026-04-30 21:03:30,164 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-04-30 21:03:30,190 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 21:03:30,213 - INFO -  * Restarting with stat
+2026-04-30 21:03:57,135 - WARNING -  * Debugger is active!
+2026-04-30 21:03:57,158 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:06:21,945 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\redis_client.py', reloading
+2026-04-30 21:06:22,181 - INFO -  * Restarting with stat
+2026-04-30 21:06:26,066 - WARNING -  * Debugger is active!
+2026-04-30 21:06:26,072 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:06:53,383 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-04-30 21:06:53,384 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 21:06:53,387 - INFO -  * Restarting with stat
+2026-04-30 21:06:54,865 - WARNING -  * Debugger is active!
+2026-04-30 21:06:54,871 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:07:23,228 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\redis_client.py', reloading
+2026-04-30 21:07:23,361 - INFO -  * Restarting with stat
+2026-04-30 21:07:25,304 - WARNING -  * Debugger is active!
+2026-04-30 21:07:25,313 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:07:31,178 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2026-04-30 21:07:31,179 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 21:07:31,182 - INFO -  * Restarting with stat
+2026-04-30 21:07:32,640 - WARNING -  * Debugger is active!
+2026-04-30 21:07:32,645 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:08:00,993 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\app.py', reloading
+2026-04-30 21:08:01,149 - INFO -  * Restarting with stat
+2026-04-30 21:08:02,694 - WARNING -  * Debugger is active!
+2026-04-30 21:08:02,699 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:09:15,849 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-30 21:09:15,849 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-30 21:09:15,853 - INFO -  * Restarting with stat
+2026-04-30 21:09:17,655 - WARNING -  * Debugger is active!
+2026-04-30 21:09:17,661 - INFO -  * Debugger PIN: 224-895-192
+2026-04-30 21:09:20,947 - INFO - Received question: cyber attack risk
+2026-04-30 21:09:21,050 - INFO - Calling AI model
+2026-04-30 21:09:26,335 - INFO - Response generated successfully
+2026-04-30 21:09:26,336 - INFO - 127.0.0.1 - - [30/Apr/2026 21:09:26] "POST /query HTTP/1.1" 200 -
+2026-04-30 21:09:37,981 - INFO - Received question: what is ai
+2026-04-30 21:09:37,982 - INFO - Calling AI model
+2026-04-30 21:09:40,024 - INFO - Response generated successfully
+2026-04-30 21:09:40,025 - INFO - 127.0.0.1 - - [30/Apr/2026 21:09:40] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:34:20,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-01 13:34:20,523 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-01 13:34:20,646 - INFO -  * Restarting with stat
+2026-05-01 13:34:47,416 - WARNING -  * Debugger is active!
+2026-05-01 13:34:47,596 - INFO -  * Debugger PIN: 224-895-192
+2026-05-01 13:35:19,196 - INFO - Received question: what is ai
+2026-05-01 13:35:19,288 - INFO - Calling AI model
+2026-05-01 13:35:24,403 - INFO - Response generated successfully
+2026-05-01 13:35:24,405 - INFO - 127.0.0.1 - - [01/May/2026 13:35:24] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:35:43,710 - INFO - Received question: what is ai
+2026-05-01 13:35:43,711 - INFO - Calling AI model
+2026-05-01 13:35:45,397 - INFO - Response generated successfully
+2026-05-01 13:35:45,398 - INFO - 127.0.0.1 - - [01/May/2026 13:35:45] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:35:48,488 - INFO - Received question: what is ai
+2026-05-01 13:35:48,489 - INFO - Calling AI model
+2026-05-01 13:35:51,230 - INFO - Response generated successfully
+2026-05-01 13:35:51,231 - INFO - 127.0.0.1 - - [01/May/2026 13:35:51] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:35:59,759 - INFO - Received question: cyber attack risk
+2026-05-01 13:35:59,759 - INFO - Calling AI model
+2026-05-01 13:36:01,416 - INFO - Response generated successfully
+2026-05-01 13:36:01,417 - INFO - 127.0.0.1 - - [01/May/2026 13:36:01] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:36:23,894 - INFO - Received question: cyber attack risk
+2026-05-01 13:36:23,895 - INFO - Calling AI model
+2026-05-01 13:36:26,610 - INFO - Response generated successfully
+2026-05-01 13:36:26,611 - INFO - 127.0.0.1 - - [01/May/2026 13:36:26] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:36:41,719 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\redis_client.py', reloading
+2026-05-01 13:36:42,265 - INFO -  * Restarting with stat
+2026-05-01 13:37:09,575 - WARNING -  * Debugger is active!
+2026-05-01 13:37:09,581 - INFO -  * Debugger PIN: 224-895-192
+2026-05-01 13:37:10,512 - INFO - Received question: cyber attack risk
+2026-05-01 13:37:10,512 - INFO - Calling AI model
+2026-05-01 13:37:13,666 - INFO - Response generated successfully
+2026-05-01 13:37:13,668 - INFO - 127.0.0.1 - - [01/May/2026 13:37:13] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:37:22,936 - INFO - Received question: cyber attack risk
+2026-05-01 13:37:22,936 - INFO - Calling AI model
+2026-05-01 13:37:24,617 - INFO - Response generated successfully
+2026-05-01 13:37:24,617 - INFO - 127.0.0.1 - - [01/May/2026 13:37:24] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:38:19,421 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-05-01 13:38:19,422 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-01 13:38:19,426 - INFO -  * Restarting with stat
+2026-05-01 13:38:21,016 - WARNING -  * Debugger is active!
+2026-05-01 13:38:21,021 - INFO -  * Debugger PIN: 224-895-192
+2026-05-01 13:38:26,799 - INFO - Received question: cyber attack risk
+2026-05-01 13:38:26,799 - INFO - Calling AI model
+2026-05-01 13:38:30,360 - INFO - Response generated successfully
+2026-05-01 13:38:30,361 - INFO - 127.0.0.1 - - [01/May/2026 13:38:30] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:38:32,351 - INFO - Received question: cyber attack risk
+2026-05-01 13:38:32,351 - INFO - Cache hit
+2026-05-01 13:38:32,352 - INFO - 127.0.0.1 - - [01/May/2026 13:38:32] "POST /query HTTP/1.1" 200 -
+2026-05-01 13:49:35,055 - INFO -  * Detected change in 'C:\\Users\\Surak\\OneDrive\\Desktop\\risk-scenario-simulator\\ai-service\\services\\redis_client.py', reloading
+2026-05-01 13:49:35,478 - INFO -  * Restarting with stat
+2026-05-01 13:50:45,923 - WARNING -  * Debugger is active!
+2026-05-01 13:50:45,979 - INFO -  * Debugger PIN: 224-895-192

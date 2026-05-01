@@ -30,7 +30,7 @@ class GroqClient:
                     "temperature": 0.3
                 }
 
-                # ✅ VERY IMPORTANT (prevents hanging)
+                #  VERY IMPORTANT (prevents hanging)
                 response = requests.post(
                     self.url,
                     headers=self.headers,
@@ -61,7 +61,7 @@ class GroqClient:
                 print(f"[Retry {attempt+1}] Error:", e)
                 time.sleep(2)
 
-        # ✅ FINAL FALLBACK
+        #  FINAL FALLBACK
         return {
             "result": {
                 "answer": "AI temporarily unavailable. Please try again later.",

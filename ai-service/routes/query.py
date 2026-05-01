@@ -1,8 +1,9 @@
 from flask import Blueprint, request, jsonify
 from services.groq_client import GroqClient
-from services.redis_client import get_cache, set_cache
+from services.redis_client import get_cache, set_cache, redis_available
 from services.logger import logger
 import json
+import os
 
 query_bp = Blueprint("query", __name__)
 
@@ -11,45 +12,42 @@ def query():
     try:
         question = request.json.get("question")
 
-        logger.info(f"Received question: {question}")
-
         if not question:
             return jsonify({"error": "Question is required"}), 400
 
-        # ✅ CREATE CLIENT HERE (NOT GLOBAL)
-        client = GroqClient()
+        #  Normalize question (VERY IMPORTANT)
+        question = question.strip().lower()
 
-        # ✅ CACHE CHECK
+        logger.info(f"Received question: {question}")
+        print("Redis available:", redis_available)
+
+        #  Cache key
         cache_key = f"query:{question}"
+
+        #  CHECK CACHE
         cached = get_cache(cache_key)
 
         if cached:
-            logger.info("Cache hit")
+            logger.info("Cache HIT")
+            print("Cache HIT")
             return jsonify({
                 "result": json.loads(cached),
                 "cached": True,
                 "meta": {"is_fallback": False}
             })
 
-        # ✅ NO CHROMA
-        docs = []
-        context = ""
+        logger.info("Cache MISS")
+        print("Cache MISS")
 
-        # ✅ PROMPT
-        prompt = f"""
-You are a professional Risk Analysis AI.
-Answer in 2-3 lines.
+        # CREATE CLIENT
+        client = GroqClient()
 
-Question:
-{question}
+        # PROMPT
+        prompt_path = os.path.join("prompts", "risk_prompt.txt")
+        with open(prompt_path, "r") as f:
+            template = f.read()
 
-Return ONLY JSON:
-{{
-  "answer": "...",
-  "risk_type": "Financial | Operational | Security | Technical",
-  "confidence": 0.0
-}}
-"""
+        prompt = template.format(question=question)
 
         try:
             logger.info("Calling AI model")
@@ -58,11 +56,10 @@ Return ONLY JSON:
 
             response = ai_response.get("result")
             meta = ai_response.get("meta", {})
-
             is_fallback = meta.get("is_fallback", False)
 
         except Exception as e:
-            logger.warning("AI failed, using fallback response")
+            logger.warning("AI failed, using fallback")
 
             response = {
                 "answer": "Potential risk detected. Further analysis recommended.",
@@ -73,7 +70,7 @@ Return ONLY JSON:
             meta = {"error": str(e)}
             is_fallback = True
 
-        # ✅ HANDLE STRING RESPONSE
+        #  Ensure JSON format
         if isinstance(response, str):
             try:
                 response = json.loads(response)
@@ -83,16 +80,16 @@ Return ONLY JSON:
                     "risk_type": "Unknown",
                     "confidence": 0.6
                 }
-
-        # ✅ CACHE ONLY IF NOT FALLBACK
+        #  STORE IN REDIS (ONLY IF NOT FALLBACK)
         if not is_fallback:
             set_cache(cache_key, json.dumps(response))
+            print("Stored in cache")
 
-        logger.info("Response generated successfully")
+        logger.info("Response generated")
 
         return jsonify({
             "result": response,
-            "sources": docs,
+            "sources": [],
             "meta": {
                 **meta,
                 "is_fallback": is_fallback
