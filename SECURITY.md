@@ -133,7 +133,7 @@ The system uses LLM (Groq), which introduces prompt injection risks.
 
 Mitigation includes:
 
-- Strict input sanitisation before sending to model
+- Strict input sanitization before sending to model
 - System prompt isolation (cannot be overridden by user input)
 - No sensitive data included in prompts
 
