@@ -278,3 +278,24 @@ All tested attack vectors are handled safely:
 - Prompt injection patterns are blocked
 - HTML sanitization prevents XSS
 - Rate limiting prevents abuse
+
+---
+
+## Day 9 — PII Audit
+
+### Findings
+
+- No personal data is stored or persisted
+- No logging of user input or sensitive data
+- Input is validated and sanitized before processing
+- Data exists only within request lifecycle (transient)
+
+### Notes
+
+- Application runs in debug mode for development
+- Production deployment will disable debug mode to avoid information exposure
+
+### Conclusion
+
+No PII exposure identified.
+Application follows safe handling practices for user input.
