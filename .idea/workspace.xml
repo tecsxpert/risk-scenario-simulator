@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a8cddfa-7bd7-4dfd-bbec-cc2b32a28941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;SQL&quot;
+    ]
   }
 }</component>
   <component name="TaskManager">
@@ -56,6 +64,11 @@
       <workItem from="1777483029409" duration="1615000" />
       <workItem from="1777486863701" duration="705000" />
       <workItem from="1777487596367" duration="727000" />
+      <workItem from="1777558118716" duration="4613000" />
+      <workItem from="1777563001862" duration="1065000" />
+      <workItem from="1777566439457" duration="730000" />
+      <workItem from="1777739659311" duration="1285000" />
+      <workItem from="1777743036846" duration="825000" />
     </task>
     <servers />
   </component>
