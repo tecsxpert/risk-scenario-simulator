@@ -1,0 +1,12 @@
+1. Groq (AI Model) 
+  Groq is a fast AI platform that runs large language models like LLaMA. 
+  It helps generate quick and accurate responses for risk analysis in real time. 
+2. RAG (Retrieval-Augmented Generation) 
+  RAG combines stored data with AI to give more accurate answers. 
+  It first retrieves relevant information and then generates a response using AI. 
+3. ChromaDB 
+  ChromaDB is used to store and search text data using embeddings. 
+  It helps the system find similar documents to improve AI responses. 
+4. Prompt Engineering 
+  Prompt engineering means designing clear and structured inputs for the AI. 
+  Better prompts lead to more accurate and meaningful outputs.
