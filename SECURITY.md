@@ -305,3 +305,4 @@ All tested attack vectors are handled safely:
 - Prompt injection patterns are blocked
 - HTML sanitization prevents XSS
 - Rate limiting prevents abuse
+
