@@ -119,3 +119,51 @@ Security posture improved with header-based protections.
 All critical and fixable vulnerabilities have been mitigated.
 
 Application security posture improved and validated through re-scan.
+
+---
+
+## Day 11 — OWASP ZAP Active Scan
+
+### Scan Type
+Full Active Scan performed on Flask AI service
+
+---
+
+### Critical Findings
+None
+
+---
+
+### High Findings
+None
+
+---
+
+### Medium Findings
+None
+
+---
+
+### Low Findings
+
+- Server Leaks Version Information  
+  Status: Accepted  
+  Reason: Flask development server exposes version details  
+  Mitigation planned in production using WSGI server (Gunicorn/Nginx)
+
+---
+
+### Informational
+
+- User Agent Fuzzer (Systemic)  
+  Status: Informational only (no security risk)
+
+---
+
+### Conclusion
+
+- No Critical or High vulnerabilities identified
+- No exploitable Medium issues found
+- Application considered secure for MVP stage
+
+Security posture verified through full active scan.
